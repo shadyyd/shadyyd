@@ -1,0 +1,17 @@
+to select specifc world:
+export PX4_SITL_WORLD=/home/shady/src/Firmware/Tools/simulation/gazebo-classic/sitl_gazebo-classic/worlds/shady.world
+
+to select specifc model with roslaunch :
+roslaunch px4 mavros_posix_sitl.launch sdf:=/home/shady/src/Firmware/Tools/simulation/gazebo-classic/sitl_gazebo-classic/models/iris_fpv_cam/iris_fpv_cam.sdf
+ 
+ 
+ bashrc last time : 
+ 
+ 
+  source /opt/ros/noetic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+source ~/src/Firmware/Tools/simulation/gazebo-classic/setup_gazebo.bash ~/src/Firmware ~/src/Firmware/build/px4_sitl_default
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/src/Firmware
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/src/Firmware/Tools/simulation/gazebo-classic/sitl_gazebo-classic
+source /home/shady/ardupilot/Tools/completion/completion.bash
+export GAZEBO_MODEL_PATH=~/gazebo_ws/gazebo_models:${GAZEBO_MODEL_PATH}
